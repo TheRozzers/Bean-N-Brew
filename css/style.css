@@ -1,7 +1,48 @@
-body {
-  background-color: red;
+/* body grid */
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "lef mid mid mid rig"
+    "lef mid mid mid rig"
+    "lef mid mid mid rig"
+    "lef mid mid mid rig";
 }
 
-p {
-  font-family: Helvetica;
+.lef { grid-area: lef; }
+
+.rig { grid-area: rig; }
+
+.mid { grid-area: mid;
+     text-align: center;}
+
+
+h2 {
+  font-family: Novecento Slab Normal;
+  color: #b77b52
+}
+
+/* navbar */
+.nav {min-width: 100%;
+     background-color: #b77b52;
+     min-height: 50px;
+     align-items: center;
+     display: flex;}
+
+/* navbar buttons */
+.nav a {
+  color: #7e583e;
+  text-decoration: none;
+  background-color: #efefef;
+  border-radius: 2px;
+  padding: 10px;
+  margin-left: 35px;
+}
+
+@font-face {
+  font-family: Novecento Slab Normal
+  src: url(Logo_Font.otf);
 }
